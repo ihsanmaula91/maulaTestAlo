@@ -13,11 +13,40 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var tabBarController:UITabBarController?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setupTabBarController()
         return true
+    }
+    
+    func setupTabBarController() {
+        tabBarController = UITabBarController()
+        
+        let homeStoryBoard = UIStoryboard(name: "Home", bundle: nil)
+        let homeViewController = homeStoryBoard.instantiateViewController(withIdentifier: "HomeViewController")
+        let homeNavigationController = UINavigationController(rootViewController: homeViewController)
+        homeNavigationController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), selectedImage: UIImage(named: "home"))
+        homeNavigationController.tabBarItem.tag = 1
+        
+        let profileStoryBoard = UIStoryboard(name: "Profile", bundle: nil)
+        let profileViewController = profileStoryBoard.instantiateViewController(withIdentifier:"ProfileViewController")
+        let profileNavigationController = UINavigationController(rootViewController: profileViewController)
+        profileNavigationController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "home"), selectedImage: UIImage(named: "home"))
+        
+        UITabBar.appearance().barTintColor = UIColor(hexString: "#ffffff")
+        UITabBar.appearance().tintColor = UIColor(hexString: "#2a58c7")
+        
+        let controllers = [homeNavigationController, profileNavigationController]
+        tabBarController?.viewControllers = controllers
+        window?.rootViewController = tabBarController
+        
+        // adjust tabbar item
+        for tabBarItem in (tabBarController?.tabBar.items)! {
+            tabBarItem.imageInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
