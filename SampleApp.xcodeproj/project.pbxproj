@@ -18,6 +18,7 @@
 		E471794A21460ACE002C455E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E471794921460ACE002C455E /* UserService.swift */; };
 		E471794D21460BB3002C455E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E471794C21460BB3002C455E /* Utility.swift */; };
 		E471794F21460F7D002C455E /* LeagueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E471794E21460F7D002C455E /* LeagueService.swift */; };
+		E4717951214613AF002C455E /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4717950214613AF002C455E /* Validate.swift */; };
 		E4E246482145869D004268DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E246472145869D004268DF /* AppDelegate.swift */; };
 		E4E246502145869D004268DF /* SampleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E4E2464E2145869D004268DF /* SampleApp.xcdatamodeld */; };
 		E4E246522145869E004268DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4E246512145869E004268DF /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 		E471794921460ACE002C455E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		E471794C21460BB3002C455E /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		E471794E21460F7D002C455E /* LeagueService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueService.swift; sourceTree = "<group>"; };
+		E4717950214613AF002C455E /* Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
 		E4E246442145869D004268DF /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E246472145869D004268DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4E2464F2145869D004268DF /* SampleApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SampleApp.xcdatamodel; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				E471794C21460BB3002C455E /* Utility.swift */,
+				E4717950214613AF002C455E /* Validate.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				E4E2467D2145A343004268DF /* LoginViewController.swift in Sources */,
 				E471793F2146075A002C455E /* LeagueDetailModel.swift in Sources */,
 				E4E246502145869D004268DF /* SampleApp.xcdatamodeld in Sources */,
+				E4717951214613AF002C455E /* Validate.swift in Sources */,
 				E4E246842145AAB3004268DF /* HomeImageCell.swift in Sources */,
 				E471794F21460F7D002C455E /* LeagueService.swift in Sources */,
 				E4E246482145869D004268DF /* AppDelegate.swift in Sources */,
