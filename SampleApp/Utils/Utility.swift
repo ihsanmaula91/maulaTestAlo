@@ -21,9 +21,7 @@ open class Utility: NSObject {
             do {
                 let jsonData = try NSData(contentsOfFile: jsonPath, options: NSData.ReadingOptions.mappedIfSafe)
                 let object = try JSONSerialization.jsonObject(with: jsonData as Data, options: .allowFragments)
-                //if let jsonDictionary = object as? [String: AnyObject] {
                 return object as AnyObject?
-                //}
             }catch {
                 // Handle Error
                 print("Caught an error : \(error.localizedDescription)")

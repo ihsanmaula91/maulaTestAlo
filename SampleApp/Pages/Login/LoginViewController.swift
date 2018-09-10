@@ -36,6 +36,10 @@ class LoginViewController: UIViewController {
         let isValidEmail = validate.validationEmail(email: emailTextField.text!)
         let isValidPassword = validate.validationPassword(password: passwordTextField.text!)
         if isValidEmail == ValidType.success && isValidPassword == ValidType.success {
+            let loginModel = LoginModel()
+            loginModel.email = emailTextField.text!
+            loginModel.password = passwordTextField.text!
+            UserService().login(loginModel)
             (UIApplication.shared.delegate as! AppDelegate).setupTabBarController()
         } else {
             var message = "Sorry, there’s been a problem completing your request. Please try again later."

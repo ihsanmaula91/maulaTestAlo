@@ -7,6 +7,7 @@ target 'SampleApp' do
 
   # Pods for SampleApp
   pod 'ObjectMapper', '~> 3.2'
+  pod 'RealmSwift'
 
   target 'SampleAppTests' do
     inherit! :search_paths

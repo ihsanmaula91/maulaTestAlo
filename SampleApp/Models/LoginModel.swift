@@ -8,18 +8,20 @@
 
 import UIKit
 import ObjectMapper
+import RealmSwift
 
-public class LoginModel: NSObject, Mappable {
+public class LoginModel: Object, Mappable {
     
     public var email:String?
     public var password:String?
-    
-    public override init() {
-        super.init()
-    }
+    @objc open dynamic var userId = 001
     
     public required convenience init?(map: Map) {
         self.init()
+    }
+    
+    override open static func primaryKey() -> String {
+        return "userId"
     }
     
     public func mapping(map: Map) {

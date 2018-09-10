@@ -8,6 +8,7 @@
 
 import UIKit
 import ObjectMapper
+import RealmSwift
 
 struct UserService {
     
@@ -15,5 +16,12 @@ struct UserService {
         let jsonMock = Utility.fetchMockJsonForThe("userInfo")
         let userInfoModel = Mapper<UserInfoModel>().map(JSON: jsonMock as! [String : Any])
         return userInfoModel!
+    }
+    
+    func login(_ loginModel: LoginModel) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(loginModel, update: true)
+        }
     }
 }
