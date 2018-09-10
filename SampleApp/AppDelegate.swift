@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        setupTabBarController()
+        goToLoginPage()
+//        setupTabBarController()
         return true
     }
     
@@ -47,6 +48,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         for tabBarItem in (tabBarController?.tabBar.items)! {
             tabBarItem.imageInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         }
+    }
+    
+    func goToLoginPage() {
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+        window?.rootViewController = viewController
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

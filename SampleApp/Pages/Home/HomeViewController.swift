@@ -33,8 +33,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func goToDetailPage(_ index: Int) {
+        let leagueDetailModel = LeagueService().getLeagueDetail(leagueId: "\(index+1)")
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        viewController.imageList = leagueDetailModel.imageList
         viewController.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(viewController, animated: true)
     }

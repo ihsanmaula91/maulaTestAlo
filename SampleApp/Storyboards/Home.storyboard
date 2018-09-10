@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="5.5999999999999996" y="303.59820089955025"/>
         </scene>
-        <!--Detail League-->
+        <!--League Detail-->
         <scene sceneID="1by-nE-KWp">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" title="Detail League" id="QLg-BZ-8YU" customClass="DetailViewController" customModule="SampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" title="League Detail" id="QLg-BZ-8YU" customClass="DetailViewController" customModule="SampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yQs-8j-tPy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

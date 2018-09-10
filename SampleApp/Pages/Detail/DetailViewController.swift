@@ -13,7 +13,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var imageScrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    var imageList: [String] = ["arsenal", "chelsea", "liverpool"]
+    var imageList: [String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

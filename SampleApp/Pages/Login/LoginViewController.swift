@@ -10,23 +10,29 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var loginContentView: UIView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupUI()
     }
     
     func setupUI() {
-        emailTextField.layer.borderWidth = 4
+        loginContentView.layer.borderWidth = 1
+        loginContentView.layer.borderColor = UIColor(hexString: "2a58c7").cgColor
+        emailTextField.layer.borderWidth = 1
         emailTextField.layer.borderColor = UIColor(hexString: "2a58c7").cgColor
-        passwordTextField.layer.borderWidth = 4
+        passwordTextField.layer.borderWidth = 1
         passwordTextField.layer.borderColor = UIColor(hexString: "2a58c7").cgColor
     }
-
+    
+    @IBAction func loginButtonClicked(_ sender: Any) {
+        (UIApplication.shared.delegate as! AppDelegate).setupTabBarController()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
