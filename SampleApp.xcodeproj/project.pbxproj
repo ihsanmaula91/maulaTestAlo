@@ -20,6 +20,7 @@
 		E4E2467B2145A328004268DF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4E2467A2145A328004268DF /* Login.storyboard */; };
 		E4E2467D2145A343004268DF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E2467C2145A343004268DF /* LoginViewController.swift */; };
 		E4E246802145A41E004268DF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E2467F2145A41E004268DF /* DetailViewController.swift */; };
+		E4E246842145AAB3004268DF /* HomeImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E246832145AAB3004268DF /* HomeImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		E4E2467A2145A328004268DF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		E4E2467C2145A343004268DF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E4E2467F2145A41E004268DF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E4E246832145AAB3004268DF /* HomeImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				E4E2467021459901004268DF /* HomeViewController.swift */,
+				E4E246832145AAB3004268DF /* HomeImageCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			files = (
 				E4E2467D2145A343004268DF /* LoginViewController.swift in Sources */,
 				E4E246502145869D004268DF /* SampleApp.xcdatamodeld in Sources */,
+				E4E246842145AAB3004268DF /* HomeImageCell.swift in Sources */,
 				E4E246482145869D004268DF /* AppDelegate.swift in Sources */,
 				E4E2467921459F14004268DF /* ProfileViewController.swift in Sources */,
 				E4E2466C2145944E004268DF /* UIColorExtension.swift in Sources */,

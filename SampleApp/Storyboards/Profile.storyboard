@@ -14,16 +14,77 @@
         <scene sceneID="uNm-EB-S2r">
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" title="Profile" id="Ohm-vg-roR" customClass="ProfileViewController" customModule="SampleApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nt9-4J-q9W">
+                    <view key="view" contentMode="scaleAspectFit" id="nt9-4J-q9W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iPv-dB-v32">
+                                <rect key="frame" x="16" y="50" width="343" height="150"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="7V7-jN-SgX">
+                                        <rect key="frame" x="8" y="15.5" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="LZj-nr-kF1"/>
+                                            <constraint firstAttribute="width" constant="120" id="uxy-cR-P7N"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muhammad Ihsan Maula" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPT-uL-JdR">
+                                        <rect key="frame" x="136" y="39" width="199" height="20"/>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                        <color key="textColor" red="0.1647058824" green="0.34509803919999998" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Male" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcU-5c-QX7">
+                                        <rect key="frame" x="136" y="67" width="32.5" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="15"/>
+                                        <color key="textColor" red="0.1647058824" green="0.34509803919999998" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+6281290530765" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJv-oq-dS0">
+                                        <rect key="frame" x="136" y="92" width="199" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="16"/>
+                                        <color key="textColor" red="0.1647058824" green="0.34509803919999998" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="7V7-jN-SgX" firstAttribute="leading" secondItem="iPv-dB-v32" secondAttribute="leading" constant="8" id="8Oe-9b-2hN"/>
+                                    <constraint firstItem="mPT-uL-JdR" firstAttribute="leading" secondItem="RcU-5c-QX7" secondAttribute="leading" id="Eqe-LG-GpI"/>
+                                    <constraint firstItem="XJv-oq-dS0" firstAttribute="leading" secondItem="RcU-5c-QX7" secondAttribute="leading" id="IiM-Xf-0qX"/>
+                                    <constraint firstItem="RcU-5c-QX7" firstAttribute="centerY" secondItem="7V7-jN-SgX" secondAttribute="centerY" id="Kqb-Ip-cn7"/>
+                                    <constraint firstItem="XJv-oq-dS0" firstAttribute="top" secondItem="RcU-5c-QX7" secondAttribute="bottom" constant="8" id="OGV-wK-asm"/>
+                                    <constraint firstAttribute="height" constant="150" id="YSc-hf-VQw"/>
+                                    <constraint firstItem="7V7-jN-SgX" firstAttribute="centerY" secondItem="iPv-dB-v32" secondAttribute="centerY" id="a8q-nX-l11"/>
+                                    <constraint firstAttribute="trailing" secondItem="XJv-oq-dS0" secondAttribute="trailing" constant="8" id="cyG-Vb-AMb"/>
+                                    <constraint firstAttribute="trailing" secondItem="mPT-uL-JdR" secondAttribute="trailing" constant="8" id="fcq-pp-tPo"/>
+                                    <constraint firstItem="RcU-5c-QX7" firstAttribute="top" secondItem="mPT-uL-JdR" secondAttribute="bottom" constant="8" id="oH0-gS-f9j"/>
+                                    <constraint firstItem="RcU-5c-QX7" firstAttribute="leading" secondItem="7V7-jN-SgX" secondAttribute="trailing" constant="8" id="pGH-Ap-BOJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iPv-dB-v32" firstAttribute="leading" secondItem="fhf-Tv-tmk" secondAttribute="leading" constant="16" id="2ci-Zk-Gqr"/>
+                            <constraint firstItem="iPv-dB-v32" firstAttribute="top" secondItem="fhf-Tv-tmk" secondAttribute="top" constant="30" id="dzb-sd-O2e"/>
+                            <constraint firstItem="fhf-Tv-tmk" firstAttribute="trailing" secondItem="iPv-dB-v32" secondAttribute="trailing" constant="16" id="iGn-qn-vxD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fhf-Tv-tmk"/>
                     </view>
+                    <connections>
+                        <outlet property="genderLabel" destination="RcU-5c-QX7" id="NNh-yf-Gtx"/>
+                        <outlet property="nameLabel" destination="mPT-uL-JdR" id="yhL-CT-Byn"/>
+                        <outlet property="phoneLabel" destination="XJv-oq-dS0" id="rp4-Ya-J8K"/>
+                        <outlet property="profileContentView" destination="iPv-dB-v32" id="YuK-fB-Ua7"/>
+                        <outlet property="profileImageView" destination="7V7-jN-SgX" id="UCz-bD-103"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gb4-CS-KQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-122" y="112"/>
+            <point key="canvasLocation" x="-122.40000000000001" y="111.99400299850076"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="profile" width="25" height="25"/>
+    </resources>
 </document>

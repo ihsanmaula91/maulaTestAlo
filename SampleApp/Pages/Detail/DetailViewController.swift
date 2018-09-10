@@ -8,28 +8,37 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
-
+class DetailViewController: UIViewController, UIScrollViewDelegate {
+    
+    @IBOutlet weak var imageScrollView: UIScrollView!
+    @IBOutlet weak var pageControl: UIPageControl!
+    
+    var imageList: [String] = ["arsenal", "chelsea", "liverpool"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        setImageCarousel()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func setImageCarousel() {
+        pageControl.numberOfPages = imageList.count
+        let width = UIScreen.main.bounds.width
+        imageScrollView.delegate = self
+        imageScrollView.isPagingEnabled = true
+        imageScrollView.contentSize = CGSize(width: width * CGFloat(imageList.count), height: 345)
+        imageScrollView.showsHorizontalScrollIndicator = false
+        
+        for index in 0 ..< imageList.count {
+            let contentPosition = index * Int(width)
+            let imageView = UIImageView(frame: CGRect(x: CGFloat(contentPosition), y: 0, width: width, height: 345))
+            imageView.image = UIImage(named: imageList[index])
+            imageView.contentMode = .scaleAspectFit
+            imageScrollView.addSubview(imageView)
+        }
     }
-    */
-
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let page = scrollView.contentOffset.x / scrollView.frame.size.width
+        pageControl.currentPage = Int(page)
+    }
 }

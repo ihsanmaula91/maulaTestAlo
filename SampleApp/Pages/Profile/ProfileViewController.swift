@@ -10,10 +10,20 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var profileContentView: UIView!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        mappingUI()
+    }
+    
+    func mappingUI() {
+        profileContentView.layer.borderWidth = 1
+        profileContentView.layer.borderColor = UIColor(hexString: "2a58c7").cgColor
     }
 
     override func didReceiveMemoryWarning() {

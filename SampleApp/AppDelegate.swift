@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let profileStoryBoard = UIStoryboard(name: "Profile", bundle: nil)
         let profileViewController = profileStoryBoard.instantiateViewController(withIdentifier:"ProfileViewController")
         let profileNavigationController = UINavigationController(rootViewController: profileViewController)
-        profileNavigationController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "home"), selectedImage: UIImage(named: "home"))
+        profileNavigationController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profile"), selectedImage: UIImage(named: "profile"))
         
         UITabBar.appearance().barTintColor = UIColor(hexString: "#ffffff")
         UITabBar.appearance().tintColor = UIColor(hexString: "#2a58c7")

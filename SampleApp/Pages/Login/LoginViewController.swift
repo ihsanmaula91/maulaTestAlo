@@ -9,11 +9,22 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func setupUI() {
+        emailTextField.layer.borderWidth = 4
+        emailTextField.layer.borderColor = UIColor(hexString: "2a58c7").cgColor
+        passwordTextField.layer.borderWidth = 4
+        passwordTextField.layer.borderColor = UIColor(hexString: "2a58c7").cgColor
     }
 
     override func didReceiveMemoryWarning() {
